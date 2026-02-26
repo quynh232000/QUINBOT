@@ -1,0 +1,22 @@
+services:
+  # Laravel App
+  quinbot-app:
+    build: ./app
+    container_name: quinbot_php
+    volumes:
+      - ./app:/var/www
+      - ./shared_storage:/var/www/storage/app/public # Dùng chung folder để lưu video
+
+  # Python Engine (Worker)
+  quinbot-engine:
+    build: ./engine
+    container_name: quinbot_python
+    depends_on:
+      - redis
+    volumes:
+      - ./engine:/app
+      - ./shared_storage:/app/media # Python ghi video vào đây
+    command: celery -A tasks worker --loglevel=info
+
+  redis:
+    image: redis:alpine

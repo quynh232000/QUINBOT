@@ -1,1 +1,27 @@
-celery, playwright, redis, python-dotenv
+# --- Core Framework & Task Queue ---
+celery==5.3.6
+redis==5.0.1
+
+# --- Web Scraping & API Requests ---
+requests==2.31.0
+beautifulsoup4==4.12.2
+
+# --- Database Connections ---
+# Chọn 1 trong 2 tùy thuộc vào Database Laravel của bạn
+mysql-connector-python==8.3.0
+# psycopg2-binary==2.9.9 (Nếu dùng PostgreSQL)
+
+# --- Environment & Utils ---
+python-dotenv==1.0.0
+
+# Cài watchdog 
+watchdog==3.0.0  # Để theo dõi file changes (nếu cần)
+
+
+# --- Optional but Recommended for Windows ---
+eventlet==0.33.3  # Nếu sau này không dùng -P solo mà muốn chạy đa luồng
+
+# Cài openai
+openai
+google-generativeai
+groq

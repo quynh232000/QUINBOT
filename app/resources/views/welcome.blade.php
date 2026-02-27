@@ -26,13 +26,13 @@
     <div class="w-full lg:max-w-2xl ">
         <div class="card w-full lg:w-1/2 bg-white dark:bg-[#1b1b18] shadow-md rounded-lg">
             <div class="card-body">
-                {{-- <h5 class="card-title">QUINBOT Control Center</h5>
-                <p>Bấm nút để bắt đầu tìm kiếm nội dung trending từ Reddit/Hacker News.</p> --}}
+                <h5 class="card-title">QUINBOT Control Center</h5>
+                <p>Bấm nút để bắt đầu tìm kiếm nội dung trending từ Reddit/Hacker News.</p>
 
                 <form action="{{ route('scan.trends') }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-primary m-auto">
-                         Scan
+                         Scan Trends
                     </button>
                 </form>
 

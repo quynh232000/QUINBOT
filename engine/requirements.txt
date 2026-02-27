@@ -25,3 +25,6 @@ eventlet==0.33.3  # Nếu sau này không dùng -P solo mà muốn chạy đa lu
 openai
 google-generativeai
 groq
+
+#  cài xử lý âm thanh
+edge-tts

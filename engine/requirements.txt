@@ -1,0 +1,1 @@
+celery, playwright, redis, python-dotenv
